@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap');
+
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+h1 {
+    letter-spacing: 5px;
+}
+
+h1, p {
+    font-family: "Montserrat", sans-serif;
+}
+
+
+body {
+    background-image: linear-gradient(45deg, crimson, cornflowerblue);
+    background-repeat: no-repeat;    
+    background-size: 200% 200%;
+    background-position: 50% 50%;
+    animation: 3s linear .1s infinite alternate bg_animation; 
+    background-attachment: fixed;
+}
+
+#landing {
+    height: 70vh;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes bg_animation {
+   from {
+    background-position: 0% 100%;
+   }
+   to {
+    background-position: 100% 0%;
+   }
+}
+
+#profile {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    object-position: 100% 0;
+    border-radius: 100%;
+    border: 4px solid crimson;
+    animation: 3s linear 0.3s infinite alternate  profile_animation; 
+}
+
+@keyframes profile_animation {
+    from {
+        border: 4px solid crimson;
+    }
+    to {
+        border: 4px solid cornflowerblue;
+    }
+}
+
+
+footer {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1% 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer a {
+    padding: .5%;
+    text-decoration: none;
+
+    
+}
+
+.fa-solid, .fa-brands {
+    transition: color 0.5s ease-in-out;
+    font-size: 25px;
+    color: white;
+    margin: 5px 10px 5px 10px;
+}
+
+
+.fa-solid:hover, .fa-brands:hover {
+   color: cornflowerblue;
+}
